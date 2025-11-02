@@ -8,6 +8,7 @@ class Client {
         return this._order
     }
 
+
 }
 
 let clients: Client[] = [
@@ -24,6 +25,43 @@ let clients: Client[] = [
     new Client(10, `han`, `zag`, `han@ukr.net`, 5565, [{title: `phone`, price: 8741}])
 
 ]
+
+
+
+let client1 = new Client(1, `nazar`, `ser`, `nazar@ukr.net`, 6245, [{title: `tv`, price: 10258}, {title: `phone`, price: 15879}]);
+
+
+class ClientManedger {
+     private clients: Client[] = [];
+
+
+     regesterClient (newClient: Client){
+         this.clients.push(newClient);
+     }
+
+
+     getClients (){
+         return this.clients
+     }
+
+
+}
+
+
+let manager1 = new ClientManedger();
+manager1.regesterClient(client1);
+
+console.log(manager1);
+
+console.log(manager1.getClients());
+
+
+
+
+
+
+
+
 
 
 console.log(clients);
